@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "keywords": [],
   "author": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "ISC",
   "scripts": {
     "build":  "tsup"
