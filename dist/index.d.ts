@@ -181,6 +181,30 @@ declare const orders: drizzle_orm_pg_core.PgTableWithColumns<{
             enumValues: undefined;
             baseColumn: never;
         }, {}, {}>;
+        date: drizzle_orm_pg_core.PgColumn<{
+            name: "date";
+            tableName: "orders";
+            dataType: "date";
+            columnType: "PgTimestamp";
+            data: Date;
+            driverParam: string;
+            notNull: false;
+            hasDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+        }, {}, {}>;
+        status: drizzle_orm_pg_core.PgColumn<{
+            name: "status";
+            tableName: "orders";
+            dataType: "string";
+            columnType: "PgChar";
+            data: string;
+            driverParam: string;
+            notNull: false;
+            hasDefault: false;
+            enumValues: [string, ...string[]];
+            baseColumn: never;
+        }, {}, {}>;
     };
     dialect: "pg";
 }>;

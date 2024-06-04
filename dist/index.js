@@ -48,7 +48,9 @@ var products = (0, import_pg_core.pgTable)("products", {
 });
 var orders = (0, import_pg_core.pgTable)("orders", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
-  customer_id: (0, import_pg_core.serial)("customer_id").references(() => customers.id)
+  customer_id: (0, import_pg_core.serial)("customer_id").references(() => customers.id),
+  date: (0, import_pg_core.timestamp)("date"),
+  status: (0, import_pg_core.char)("status", { length: 1 })
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
