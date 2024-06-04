@@ -11,7 +11,8 @@ export default defineConfig({
         host: process.env.DB_HOST ?? "not-set",
         user: process.env.DB_USER ?? "not-set",
         password: process.env.DB_PSW ?? "not-set",
-        port: 5432
+        port: 5432,
+        ssl: false
     },
     verbose: true,
     strict: true,
