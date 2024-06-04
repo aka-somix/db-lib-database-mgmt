@@ -162,6 +162,18 @@ declare const products: drizzle_orm_pg_core.PgTableWithColumns<{
             enumValues: undefined;
             baseColumn: never;
         }, {}, {}>;
+        price: drizzle_orm_pg_core.PgColumn<{
+            name: "price";
+            tableName: "products";
+            dataType: "number";
+            columnType: "PgDoublePrecision";
+            data: number;
+            driverParam: string | number;
+            notNull: true;
+            hasDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+        }, {}, {}>;
     };
     dialect: "pg";
 }>;

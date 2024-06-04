@@ -45,7 +45,8 @@ var products = (0, import_pg_core.pgTable)("products", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
   name: (0, import_pg_core.text)("name").notNull(),
   description: (0, import_pg_core.varchar)("description", { length: 256 }),
-  category_id: (0, import_pg_core.serial)("category_id").references(() => categories.id).notNull()
+  category_id: (0, import_pg_core.serial)("category_id").references(() => categories.id).notNull(),
+  price: (0, import_pg_core.doublePrecision)("price").notNull()
 });
 var orders = (0, import_pg_core.pgTable)("orders", {
   id: (0, import_pg_core.serial)("id").primaryKey(),

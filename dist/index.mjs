@@ -1,5 +1,5 @@
 // src/database/schema.ts
-import { char, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import { char, pgTable, serial, text, timestamp, varchar, doublePrecision } from "drizzle-orm/pg-core";
 var customers = pgTable("customers", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
@@ -16,7 +16,8 @@ var products = pgTable("products", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   description: varchar("description", { length: 256 }),
-  category_id: serial("category_id").references(() => categories.id).notNull()
+  category_id: serial("category_id").references(() => categories.id).notNull(),
+  price: doublePrecision("price").notNull()
 });
 var orders = pgTable("orders", {
   id: serial("id").primaryKey(),
