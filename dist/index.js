@@ -31,26 +31,26 @@ module.exports = __toCommonJS(src_exports);
 var import_pg_core = require("drizzle-orm/pg-core");
 var customers = (0, import_pg_core.pgTable)("customers", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
-  name: (0, import_pg_core.text)("name"),
-  surname: (0, import_pg_core.text)("surname"),
+  name: (0, import_pg_core.text)("name").notNull(),
+  surname: (0, import_pg_core.text)("surname").notNull(),
   phone: (0, import_pg_core.varchar)("phone", { length: 256 })
 });
 var categories = (0, import_pg_core.pgTable)("categories", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
-  name: (0, import_pg_core.text)("name"),
+  name: (0, import_pg_core.text)("name").notNull(),
   description: (0, import_pg_core.varchar)("description", { length: 256 })
 });
 var products = (0, import_pg_core.pgTable)("products", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
-  name: (0, import_pg_core.text)("name"),
+  name: (0, import_pg_core.text)("name").notNull(),
   description: (0, import_pg_core.varchar)("description", { length: 256 }),
-  category_id: (0, import_pg_core.serial)("category_id").references(() => categories.id)
+  category_id: (0, import_pg_core.serial)("category_id").references(() => categories.id).notNull()
 });
 var orders = (0, import_pg_core.pgTable)("orders", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
   customer_id: (0, import_pg_core.serial)("customer_id").references(() => customers.id),
-  date: (0, import_pg_core.timestamp)("date"),
-  status: (0, import_pg_core.char)("status", { length: 1 })
+  date: (0, import_pg_core.timestamp)("date").notNull(),
+  status: (0, import_pg_core.char)("status", { length: 1 }).notNull()
 });
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

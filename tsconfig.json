@@ -107,6 +107,6 @@
     "skipLibCheck": true,
   },
   "exclude": [
-    "src/drizzle/**"
+    "drizzle/**"
   ]
 }

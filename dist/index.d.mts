@@ -23,7 +23,7 @@ declare const customers: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgText";
             data: string;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
@@ -35,7 +35,7 @@ declare const customers: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgText";
             data: string;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
@@ -78,7 +78,7 @@ declare const categories: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgText";
             data: string;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
@@ -121,7 +121,7 @@ declare const products: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgText";
             data: string;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
@@ -188,7 +188,7 @@ declare const orders: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgTimestamp";
             data: Date;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: undefined;
             baseColumn: never;
@@ -200,7 +200,7 @@ declare const orders: drizzle_orm_pg_core.PgTableWithColumns<{
             columnType: "PgChar";
             data: string;
             driverParam: string;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
