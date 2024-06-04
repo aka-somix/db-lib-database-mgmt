@@ -8,8 +8,10 @@
   "types": "dist/index.d.ts",
   "license": "ISC",
   "scripts": {
-    "build": "tsup",
-    "db:push": "drizzle-kit push"
+    "lib:build": "tsup",
+    "db:push": "drizzle-kit push",
+    "db:gen": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "drizzle-orm": "^0.31.0",

@@ -6,6 +6,7 @@ export const customers = pgTable('customers', {
   name: text('name').notNull(),
   surname: text('surname').notNull(),
   phone: varchar('phone', { length: 256 }),
+  email: varchar('email', { length: 256 }).notNull(),
 });
 
 export const categories = pgTable('categories', {

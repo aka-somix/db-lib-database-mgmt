@@ -4,7 +4,8 @@ var customers = pgTable("customers", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   surname: text("surname").notNull(),
-  phone: varchar("phone", { length: 256 })
+  phone: varchar("phone", { length: 256 }),
+  email: varchar("email", { length: 256 }).notNull()
 });
 var categories = pgTable("categories", {
   id: serial("id").primaryKey(),

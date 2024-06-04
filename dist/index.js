@@ -33,7 +33,8 @@ var customers = (0, import_pg_core.pgTable)("customers", {
   id: (0, import_pg_core.serial)("id").primaryKey(),
   name: (0, import_pg_core.text)("name").notNull(),
   surname: (0, import_pg_core.text)("surname").notNull(),
-  phone: (0, import_pg_core.varchar)("phone", { length: 256 })
+  phone: (0, import_pg_core.varchar)("phone", { length: 256 }),
+  email: (0, import_pg_core.varchar)("email", { length: 256 }).notNull()
 });
 var categories = (0, import_pg_core.pgTable)("categories", {
   id: (0, import_pg_core.serial)("id").primaryKey(),

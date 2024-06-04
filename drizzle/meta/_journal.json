@@ -8,6 +8,20 @@
       "when": 1717496573119,
       "tag": "0000_fresh_timeslip",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1717496891668,
+      "tag": "0001_slippery_jetstream",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1717497026428,
+      "tag": "0002_bitter_star_brand",
+      "breakpoints": true
     }
   ]
 }
